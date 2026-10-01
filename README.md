@@ -43,15 +43,14 @@ cd /home/vie-arch.1/astrial-moderator-bot
 python3 bot.py
 ```
 
-### Background Service via Systemd:
-To keep the bot running 24/7 in the background:
-```bash
-# Enable and start the service
-systemctl --user enable --now astrial-moderator.service
+### Deploy to Render (24/7 Cloud Hosting - Laptop Off):
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/viebulusan/astrial-moderator-bot)
 
-# Check service status
-systemctl --user status astrial-moderator.service
+1. Open the [Render Dashboard](https://dashboard.render.com).
+2. Click **New +** ➔ **Web Service**.
+3. Select your GitHub repository: `viebulusan/astrial-moderator-bot`.
+4. Choose the **Free** instance type.
+5. Click **Create Web Service**.
 
-# Check live logs
-journalctl --user -u astrial-moderator.service -f
-```
+*Render will automatically detect `render.yaml` and run the bot permanently in the cloud!*
+
