@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: astrial-moderator-bot
+    runtime: python
+    plan: free
+    buildCommand: "echo 'Ready'"
+    startCommand: "python3 bot.py"
+    envVars:
+      - key: PORT
+        value: "10000"
+      - key: TELEGRAM_BOT_TOKEN
+        value: 8873818882:AAGwrYDbVX2jwpeKZIFzXaQ-YlcfEXImydw
